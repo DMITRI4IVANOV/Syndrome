@@ -1,19 +1,18 @@
 package StatisticSindrome;
 
 public class StatSindrom {
-//    // Количество квадратов
-//    public int calcSqrt(int min, int max) {
-//        int count = 0;
-//        for (int i = 10; i <= 99; i++) {
-//            int sqrt = i * i;
-//            if (sqrt < min) {
-//                continue;
-//            }
-//            if (sqrt > max) {
-//                continue;
-//            }
-//            count ++;
-//        }
-//        return count;
-//    }
+    /**
+     * Calculate index of max income
+     *
+     * @param incomes - array of incomes
+     * @return - index of first max value
+     */
+    public long findMax(long[] incomes) {
+        long current_max_index = 0;
+        long current_max = incomes[0];
+        for (long income : incomes)
+            if (current_max < income)
+                current_max = income;
+        return current_max;
+    }
 }
