@@ -17,4 +17,16 @@ class StatSindromTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void sholdMidlFindMax() {
+        StatSindrom service = new StatSindrom();
+
+        long[] incomesInBillions = {12, 5, 8, 4, 5, 33, 8, 6, 11, 11, 12};
+        long expected = 33;
+
+        long actual = service.findMax(incomesInBillions);
+
+        assertEquals(expected, actual);
+    }
 }
